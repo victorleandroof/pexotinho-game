@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 1447857757}
   - component: {fileID: 3339481644816344581}
   m_Layer: 0
-  m_Name: Player_Isometric_Witch
+  m_Name: MainPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
