@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Movimento : MonoBehaviour
 {
+    public VariableJoystick variableJoystick;
     public float movementSpeed = 1f;
     IsometricoRenderer isoRenderer;
     Rigidbody2D rbody;
     // Start is called before the first frame update
+
     private void Awake()
     {
         rbody = GetComponent<Rigidbody2D>();
@@ -21,7 +23,7 @@ public class Movimento : MonoBehaviour
         Vector2 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector2 inputVector = new Vector2(horizontalInput, verticalInput);
+        Vector2 inputVector = new Vector2(variableJoystick.Horizontal, variableJoystick.Vertical);
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
