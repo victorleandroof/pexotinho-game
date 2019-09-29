@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Movimento : MonoBehaviour
 {
+    //https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631 [Fenerax Studios] 
     public VariableJoystick variableJoystick;
     public float movementSpeed = 1f;
+    //https://github.com/UnityTechnologies/2D_IsoTilemaps
     IsometricoRenderer isoRenderer;
     Rigidbody2D rbody;
-    // Start is called before the first frame update
 
     private void Awake()
     {
@@ -17,7 +18,6 @@ public class Movimento : MonoBehaviour
         isoRenderer = GetComponentInChildren<IsometricoRenderer>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 currentPos = rbody.position;
