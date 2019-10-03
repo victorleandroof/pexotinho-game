@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movimento : MonoBehaviour
 {
     //https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631 [Fenerax Studios] 
-    public VariableJoystick variableJoystick;
+    public FloatingJoystick variableJoystick;
     public float movementSpeed = 1f;
     //https://github.com/UnityTechnologies/2D_IsoTilemaps
     IsometricoRenderer isoRenderer;
